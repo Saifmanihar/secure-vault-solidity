@@ -1,28 +1,35 @@
-REMIX DEFAULT WORKSPACE
+# SecureVault – Solidity Smart Contract
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+SecureVault is a simple Ethereum smart contract written in Solidity that demonstrates secure ETH deposits, controlled withdrawals, and basic access management.
 
-This workspace contains 3 directories:
+## What this project does
+- Allows users to deposit ETH into the contract
+- Enforces a daily withdrawal limit per user
+- Supports approved withdrawers
+- Emits events for deposits, withdrawals, and admin actions
+- Includes pause functionality for safety
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+## Why I built this
+I built this project to understand how real-world EVM smart contracts are structured, deployed, and tested. The focus was on security basics, clean Solidity patterns, and learning how on-chain logic works in practice.
 
-SCRIPTS
+## Tech stack
+- Solidity (EVM)
+- Remix IDE
+- Ethereum Virtual Machine (local VM)
+- Git & GitHub
 
-The 'scripts' folder has two typescript files which help to deploy the 'Storage' contract using 'ethers.js' libraries.
+## Key concepts covered
+- `payable` functions
+- mappings & access control
+- events for transaction tracking
+- basic security checks
+- gas-aware design
 
-For the deployment of any other contract, just update the contract name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts`
+## How to run
+1. Open the contract in Remix
+2. Compile using Solidity ^0.8.x
+3. Deploy using Remix VM
+4. Interact with deposit & withdraw functions
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
-
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
-
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+## Status
+Learning project — actively improving and experimenting with testing, security patterns, and gas optimizations.
